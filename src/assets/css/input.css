@@ -1,0 +1,38 @@
+@import url("./fontUbuntu.css");
+@import url("./fontRoboto.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    accent-color: purple;
+    /* Works on Firefox */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: grey darkgrey;
+    }
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    *::-webkit-scrollbar-track {
+      background: lightgrey;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      background-color: lightgrey;
+      border-radius: 20px;
+      border: 2px solid grey;
+    }
+  }
+}
+
+@layer components {
+  body {
+    @apply bg-white text-col1-800 min-w-[320px] overflow-x-hidden font-roboto;
+  }
+}
