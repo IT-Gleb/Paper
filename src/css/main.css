@@ -684,8 +684,20 @@ body {
   top: 0px;
 }
 
+.top-1\/4 {
+  top: 25%;
+}
+
 .top-5 {
   top: 1.25rem;
+}
+
+.left-\[50\%\] {
+  left: 50%;
+}
+
+.left-\[-50\%\] {
+  left: -50%;
 }
 
 .z-10 {
@@ -823,10 +835,6 @@ body {
   margin-top: 60px;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
 .flex {
   display: flex;
 }
@@ -895,6 +903,10 @@ body {
   height: 342px;
 }
 
+.h-\[40\%\] {
+  height: 40%;
+}
+
 .h-\[45px\] {
   height: 45px;
 }
@@ -915,6 +927,10 @@ body {
   height: 63px;
 }
 
+.h-\[70\%\] {
+  height: 70%;
+}
+
 .h-\[8px\] {
   height: 8px;
 }
@@ -923,28 +939,12 @@ body {
   height: 95%;
 }
 
+.h-\[50vh\] {
+  height: 50vh;
+}
+
 .max-h-\[70vh\] {
   max-height: 70vh;
-}
-
-.max-h-\[200px\] {
-  max-height: 200px;
-}
-
-.max-h-\[240px\] {
-  max-height: 240px;
-}
-
-.max-h-\[40px\] {
-  max-height: 40px;
-}
-
-.max-h-\[140px\] {
-  max-height: 140px;
-}
-
-.max-h-\[180px\] {
-  max-height: 180px;
 }
 
 .w-10 {
@@ -1060,6 +1060,10 @@ body {
   width: fit-content;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
 .max-w-\[1180px\] {
   max-width: 1180px;
 }
@@ -1100,6 +1104,41 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-x-\[4\%\] {
+  --tw-translate-x: 4%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-2\/4 {
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-1\/4 {
+  --tw-translate-x: 25%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-6 {
+  --tw-translate-x: 1.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-\[40px\] {
+  --tw-translate-x: 40px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-\[-50\%\] {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-\[50\%\] {
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .scale-75 {
   --tw-scale-x: .75;
   --tw-scale-y: .75;
@@ -1108,6 +1147,10 @@ body {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform-gpu {
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -1190,10 +1233,6 @@ body {
   gap: 2rem;
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .overflow-y-auto {
   overflow-y: auto;
 }
@@ -1255,6 +1294,10 @@ body {
   border-top-width: 1px;
 }
 
+.border-none {
+  border-style: none;
+}
+
 .border-col1-100 {
   --tw-border-opacity: 1;
   border-color: rgb(120 117 254 / var(--tw-border-opacity));
@@ -1273,6 +1316,11 @@ body {
 .border-col1-600 {
   --tw-border-opacity: 1;
   border-color: rgb(235 235 235 / var(--tw-border-opacity));
+}
+
+.border-col1-650 {
+  --tw-border-opacity: 1;
+  border-color: rgb(188 188 188 / var(--tw-border-opacity));
 }
 
 .border-col1-700 {
@@ -1298,6 +1346,11 @@ body {
 .border-col1-950 {
   --tw-border-opacity: 1;
   border-color: rgb(102 102 102 / var(--tw-border-opacity));
+}
+
+.border-yellow-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(253 224 71 / var(--tw-border-opacity));
 }
 
 .border-y-col1-750 {
@@ -1377,6 +1430,11 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-col1-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 102 102 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1396,6 +1454,10 @@ body {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-8 {
@@ -1512,6 +1574,11 @@ body {
   padding-bottom: 2rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1598,14 +1665,6 @@ body {
 
 .pt-9 {
   padding-top: 2.25rem;
-}
-
-.pt-7 {
-  padding-top: 1.75rem;
-}
-
-.pt-11 {
-  padding-top: 2.75rem;
 }
 
 .text-center {
@@ -1811,6 +1870,11 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-yellow-400 {
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity));
+}
+
 .opacity-75 {
   opacity: 0.75;
 }
@@ -1844,6 +1908,14 @@ body {
   outline-color: #85859B;
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .first-letter\:text-2xl::first-letter {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1862,6 +1934,11 @@ body {
 .odd\:text-col1-950:nth-child(odd) {
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+
+.hover\:border-col1-400:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(73 70 180 / var(--tw-border-opacity));
 }
 
 .hover\:border-yellow-500:hover {

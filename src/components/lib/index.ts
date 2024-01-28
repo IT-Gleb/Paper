@@ -35,3 +35,14 @@ export function check_Length(param1: string, param2: number) {
   res = res && param1.length >= param2;
   return res;
 }
+
+export function getNowDay() {
+  let res: string = "2024-01-15";
+  const Dt = new Date();
+  let day = Dt.getDate();
+  let tDay = day < 10 ? "0" + day : day;
+
+  res = Dt.getFullYear() + "-" + Dt.getMonth() + 1 + "-" + tDay;
+
+  return res;
+}

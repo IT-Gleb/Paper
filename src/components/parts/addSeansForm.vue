@@ -1,14 +1,20 @@
 <script setup lang="ts">
-import { Films_Url_sorted, SeansesUrl, check_Length } from "../lib";
+import { Films_Url_sorted, SeansesUrl, check_Length, getNowDay } from "../lib";
 import useSWRV from "swrv";
 import { swrFetcher } from "../reUse/swrFetcher";
 import { ref, onMounted, onUnmounted } from "vue";
 import InputSeans from "./inputSeans.vue";
 import progressBar from "../progressBar.vue";
+import messageForm from "../Pages/message/messageForm.vue";
 
 const theEmit = defineEmits(["closeForm"]);
 const sForm = ref<any>(undefined);
 const dataJSON = ref<any>(undefined);
+const DayInput = ref<string>(getNowDay());
+const is_showMessageForm = ref<boolean>(false);
+const messageStr = ref<string>("");
+
+//DayInput.value = getNowDay();
 
 const textIn = ref<boolean>(false);
 
@@ -98,9 +104,8 @@ const check_Seans_exist = async (param1: String) => {
           theEmit("closeForm"); //Закрыть форму с вводом нового сеанса
           return res.json();
         } else {
-          alert(
-            `Сеанс за дату ${param1} уже существует. Измените дату. И заново введите данные!`
-          );
+          messageStr.value = `Сеанс за  дату << ${param1} >> уже существует. Измените дату. И заново введите данные!`;
+          show_Message();
         }
       })
       // .then((data) => {
@@ -136,6 +141,11 @@ const check_Values = () => {
   }
 };
 
+const show_Message = () => {
+  is_showMessageForm.value = true;
+  // console.log("Показать форму...");
+};
+
 onMounted(() => {
   timerId = setInterval(() => {
     check_Values();
@@ -162,7 +172,7 @@ onUnmounted(() => {
         <select
           class="w-[100%] focus: outline-1 focus:outline-col1-700"
           name="FilmsList"
-          size="15"
+          size="12"
           v-model="selectedFilm"
         >
           <option
@@ -172,7 +182,7 @@ onUnmounted(() => {
             ---Список фильмов---
           </option>
           <option
-            class="px-1"
+            class="px-1 odd:bg-rose-50"
             v-for="film in films"
             :key="film.id"
             :value="film.title"
@@ -197,6 +207,7 @@ onUnmounted(() => {
               type="date"
               required
               name="dateSeans"
+              v-model="DayInput"
             />
           </p>
         </label>
@@ -274,4 +285,14 @@ onUnmounted(() => {
       </div>
     </form>
   </div>
+  <message-form
+    :showForm="is_showMessageForm"
+    @show-message-form="show_Message"
+    @close-message-form="
+      () => {
+        is_showMessageForm = false;
+      }
+    "
+    >{{ messageStr }}
+  </message-form>
 </template>
