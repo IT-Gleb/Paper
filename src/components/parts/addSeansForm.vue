@@ -76,10 +76,43 @@ const ok_Form = (event: MouseEvent) => {
   };
   // console.log(dataJSON);
   try {
-    updateSeansDb();
-  } finally {
-    theEmit("closeForm");
+    //    updateSeansDb();
+    check_Seans_exist(dataJSON.value.day);
+  } catch (err) {
+    console.log("Какая-то ошибка!");
   }
+};
+
+const check_Seans_exist = async (param1: String) => {
+  try {
+    await fetch(
+      `https://639e05c83542a26130555cae.mockapi.io/IdSeanses/?day=${param1}`,
+      {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      }
+    )
+      .then((res) => {
+        if (!res.ok) {
+          updateSeansDb(); //Добавить данные в базу
+          theEmit("closeForm"); //Закрыть форму с вводом нового сеанса
+          return res.json();
+        } else {
+          alert(
+            `Сеанс за дату ${param1} уже существует. Измените дату. И заново введите данные!`
+          );
+        }
+      })
+      // .then((data) => {
+      //   if (data) console.log(data);
+      // })
+      .catch((err) => {
+        console.log(err, "ОШИБКА !!!");
+      });
+  } catch (err) {
+    console.log("not Found...");
+  }
+  // console.log(result);
 };
 
 const cancel_Form = (event: MouseEvent) => {

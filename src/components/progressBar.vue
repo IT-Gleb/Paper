@@ -25,7 +25,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-[300px] mx-auto p-2 text-center text-xs font-semibold">
+  <div class="w-[300px] mx-auto p-2 text-center text-xs font-semibold bg-white">
     <slot></slot>
     <progress class="w-[100%] h-[8px]" max="100" :value="p_value">
       {{ p_value }}
