@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <label class="w-[100%] mb-3 flex">
+  <label class="w-[100%] mb-3 flex flex-wrap">
     <input type="hidden" :name="nameSeans" :value="paramTimeSeans" />
     <span class="text-[10px] font-roboto font-semibold">{{
       paramTimeSeans

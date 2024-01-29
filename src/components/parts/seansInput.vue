@@ -64,6 +64,7 @@ onMounted(() => {
       ref="inputRef"
       @blur="checkValue"
       @focus="thisFocus"
+      placeholder="Наименование фильма..."
     />
     <seans-add-button @add-event="addValue"></seans-add-button>
     <seans-clear-button @clear-event="clearValue"></seans-clear-button>

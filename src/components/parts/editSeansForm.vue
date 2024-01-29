@@ -114,7 +114,7 @@ const updateSeansDb = async () => {
     class="w-[100%] fixed left-0 top-0 right-0 bottom-0 bg-black opacity-75"
   ></div>
   <div
-    class="w-[70%] h-[50vh] mt-[10%] top-5 left-[15%] absolute bg-white p-8 z-10 shadow-xl shadow-black rounded-xl border-8 border-col1-700"
+    class="w-[70%] h-[51vh] mt-[10%] top-5 left-[15%] absolute bg-white p-8 z-10 shadow-xl shadow-black rounded-xl border-8 border-col1-700"
   >
     <p v-if="filmsError">Ошибка!!! не смог загрузить список фильмов.</p>
     <progress-bar v-else-if="!filmsError && !films"
@@ -128,7 +128,7 @@ const updateSeansDb = async () => {
         <select
           class="w-[100%] font-roboto active:outline-none focus:outline-none pl-2"
           name="films"
-          size="9"
+          size="12"
           v-model="selectedText"
         >
           <option

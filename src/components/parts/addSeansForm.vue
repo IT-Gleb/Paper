@@ -104,7 +104,7 @@ const check_Seans_exist = async (param1: String) => {
           theEmit("closeForm"); //Закрыть форму с вводом нового сеанса
           return res.json();
         } else {
-          messageStr.value = `Сеанс за  дату << ${param1} >> уже существует. Измените дату. И заново введите данные!`;
+          messageStr.value = `Сеанс за  дату << ${param1} >> уже существует. Измените дату. Заново введите данные!`;
           show_Message();
         }
       })
@@ -172,7 +172,7 @@ onUnmounted(() => {
         <select
           class="w-[100%] focus: outline-1 focus:outline-col1-700"
           name="FilmsList"
-          size="12"
+          size="14"
           v-model="selectedFilm"
         >
           <option
