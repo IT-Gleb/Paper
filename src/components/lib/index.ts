@@ -41,8 +41,11 @@ export function getNowDay() {
   const Dt = new Date();
   let day = Dt.getDate();
   let tDay = day < 10 ? "0" + day : day;
+  let mn = Dt.getMonth() + 1;
+  let t_Month = mn < 10 ? "0" + mn : mn;
 
-  res = Dt.getFullYear() + "-" + Dt.getMonth() + 1 + "-" + tDay;
+  res = Dt.getFullYear() + "-" + t_Month + "-" + tDay;
+  console.log(res);
 
   return res;
 }
