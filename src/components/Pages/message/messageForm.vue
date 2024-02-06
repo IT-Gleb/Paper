@@ -23,7 +23,7 @@ watchEffect(() => {
   ></div>
   <div
     v-if="is_Show"
-    class="w-[60%] h-[40%] mx-auto bg-white left-[50%] absolute top-1/4 shadow-xl translate-x-[-50%] transform-gpu shadow-black activeWindow"
+    class="w-[60%] min-h-[40%] mx-auto bg-white left-[50%] absolute top-1/4 shadow-xl flex flex-col translate-x-[-50%] transform-gpu shadow-black activeWindow"
   >
     <div class="w-[100%] flex place-items-stretch justify-end bg-col1-950 p-1">
       <div class="w-[90%]">
@@ -38,11 +38,11 @@ watchEffect(() => {
         </button>
       </div>
     </div>
-    <div class="p-6 h-[70%] w-[100%] border-b border-col1-650">
+    <div class="p-6 w-[100%] border-b border-col1-650 flex-grow">
       <slot></slot>
     </div>
 
-    <div class="w-[100%] mx-auto py-4 flex justify-center">
+    <div class="w-[100%] mx-auto py-4 flex justify-center flex-shrink-0">
       <button
         class="px-4 py-2 text-sm font-ubuntu border border-col1-950 rounded-md uppercase active:bg-col1-900 active:text-col1-200 hover:shadow-lg hover:border-col1-400"
         @click="close_This"

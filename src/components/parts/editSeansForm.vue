@@ -114,7 +114,7 @@ const updateSeansDb = async () => {
     class="w-[100%] fixed left-0 top-0 right-0 bottom-0 bg-black opacity-75"
   ></div>
   <div
-    class="w-[70%] h-[51vh] mt-[10%] top-5 left-[15%] absolute bg-white p-8 z-10 shadow-xl shadow-black rounded-xl border-8 border-col1-700"
+    class="w-[70%] min-h-[35vh] mt-[10%] top-5 left-[15%] absolute bg-white p-8 z-10 flex flex-col shadow-xl shadow-black rounded-xl border-8 border-col1-700"
   >
     <p v-if="filmsError">Ошибка!!! не смог загрузить список фильмов.</p>
     <progress-bar v-else-if="!filmsError && !films"
@@ -122,7 +122,7 @@ const updateSeansDb = async () => {
     >
 
     <div
-      class="w-[100%] flex place-items-stretch justify-center border-b border-l border-r"
+      class="w-[100%] flex-grow flex place-items-stretch justify-center border-b border-l border-r"
     >
       <div v-if="films" class="w-[40%] border-r">
         <select
@@ -138,7 +138,7 @@ const updateSeansDb = async () => {
             <span class="w-fit mx-auto">--- Список фильмов ---</span>
           </option>
           <option
-            class="odd:bg-rose-50 p-1 text-sm"
+            class="odd:bg-rose-50 p-1 text-md text-black font-roboto"
             v-for="(film, index) in films"
             :key="film.id"
             :value="film.title"
@@ -219,7 +219,9 @@ const updateSeansDb = async () => {
       </div>
     </div>
 
-    <div class="w-[80%] mx-auto mt-5 p-4 place-items-center justify-evenly">
+    <div
+      class="w-[80%] flex-shrink-0 mx-auto mt-5 p-4 place-items-center justify-evenly"
+    >
       <div class="flex gap-4 font-ubuntu text-md">
         Сохранить:
         <label class="flex gap-2 justify-center text-sm cursor-pointer">

@@ -57,7 +57,7 @@ onMounted(() => {
 <template>
   <div class="w-[100%] flex justify-between gap-2 px-1">
     <input
-      class="w-[90%] border border-col1-500 rounded-lg focus:outline focus:outline-col1-900 px-4"
+      class="w-[90%] border text-black border-col1-500 rounded-lg focus:outline focus:outline-col1-900 px-4"
       type="text"
       :name="nameValue"
       v-model="inputValue"
