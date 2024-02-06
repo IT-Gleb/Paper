@@ -1,4 +1,4 @@
-# Верстка сайта по макету Figma. Адаптив. Vue 3, Typescript, TailwindCSS.
+# Верстка сайта по макету [Figma](https://www.figma.com/file/sJwabNIQ83JF9XIGfYCOl4/Simple?type=design&mode=design). Адаптив. Vue 3, Typescript, TailwindCSS.
 
 # Vue 3 + TypeScript + Vite
 
