@@ -16,7 +16,7 @@
     /* Works on Firefox */
     * {
       scrollbar-width: thin;
-      scrollbar-color: grey darkgrey;
+      scrollbar-color: theme("colors.slate.400") theme("colors.slate.700");
     }
     /* Works on Chrome, Edge, and Safari */
     *::-webkit-scrollbar {
@@ -24,13 +24,13 @@
     }
 
     *::-webkit-scrollbar-track {
-      background: lightgrey;
+      background: theme("colors.slate.300");
     }
 
     *::-webkit-scrollbar-thumb {
-      background-color: lightgrey;
+      background-color: theme("colors.slate.300");
       border-radius: 20px;
-      border: 2px solid grey;
+      border: 2px solid theme("colors.slate.500");
     }
   }
 }
