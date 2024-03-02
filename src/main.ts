@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import "./css/main.css";
+import "/src/assets/css/styles.css";
 import appRouter from "./Router/mRouter";
 import vInterceptBtn from "./components/directives/interceptBtn";
 import App from "./App.vue";

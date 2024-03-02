@@ -6,9 +6,13 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply accent-slate-200;
+  }
+
   html,
   body {
-    accent-color: purple;
+    /* accent-color: purple; */
     /* Works on Firefox */
     * {
       scrollbar-width: thin;
