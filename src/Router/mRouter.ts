@@ -6,7 +6,7 @@ const appRoutes = [
     component: () => import("../components/Pages/MainPage.vue"),
   },
   {
-    path: "/seanses",
+    path: "/Paper/seanses",
     component: () => import("../components/Pages/seansesPage.vue"),
   },
 ];

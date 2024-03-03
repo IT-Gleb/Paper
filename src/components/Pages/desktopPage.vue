@@ -70,7 +70,7 @@ const { KatalogBtn, upBtn, textBtn } = useNeededComponents();
               <RouterLink to="/Paper/">Контакты</RouterLink>
             </li>
             <li class="text-[20px] text-col1-800">
-              <RouterLink to="/seanses">Сеансы</RouterLink>
+              <RouterLink to="/Paper/seanses">Сеансы</RouterLink>
             </li>
           </ul>
         </nav>
