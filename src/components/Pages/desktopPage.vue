@@ -5,6 +5,8 @@ import { useUpButton, useNeededComponents } from "../reUse/hideShowBtn";
 const { do_Show, show_Button, hide_Button } = useUpButton();
 
 const { KatalogBtn, upBtn, textBtn } = useNeededComponents();
+const m_Base: string = import.meta.env.BASE_URL;
+const to_seanses: string = m_Base + "seanses";
 </script>
 
 <template>
@@ -58,19 +60,19 @@ const { KatalogBtn, upBtn, textBtn } = useNeededComponents();
             role="navigation"
           >
             <li class="text-[20px] text-col1-800">
-              <RouterLink to="/Paper/">Продукция</RouterLink>
+              <RouterLink :to="m_Base">Продукция</RouterLink>
             </li>
             <li class="text-[20px] text-col1-800">
-              <RouterLink to="/Paper/">Материалы</RouterLink>
+              <RouterLink :to="m_Base">Материалы</RouterLink>
             </li>
             <li class="text-[20px] text-col1-800">
-              <RouterLink to="/Paper/">О нас</RouterLink>
+              <RouterLink :to="m_Base">О нас</RouterLink>
             </li>
             <li class="text-[20px] text-col1-800">
-              <RouterLink to="/Paper/">Контакты</RouterLink>
+              <RouterLink :to="m_Base">Контакты</RouterLink>
             </li>
             <li class="text-[20px] text-col1-800">
-              <RouterLink to="/Paper/seanses">Сеансы</RouterLink>
+              <RouterLink :to="to_seanses">Сеансы</RouterLink>
             </li>
           </ul>
         </nav>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from "vue";
+const m_Base: string = import.meta.env.BASE_URL;
 
 const listSeanses = defineAsyncComponent(() => import("../parts/seanses.vue"));
 </script>
@@ -46,19 +47,19 @@ const listSeanses = defineAsyncComponent(() => import("../parts/seanses.vue"));
           role="navigation"
         >
           <li class="text-[20px] text-col1-800">
-            <RouterLink to="/Paper/">Продукция</RouterLink>
+            <RouterLink :to="m_Base">Продукция</RouterLink>
           </li>
           <li class="text-[20px] text-col1-800">
-            <RouterLink to="/Paper/">Материалы</RouterLink>
+            <RouterLink :to="m_Base">Материалы</RouterLink>
           </li>
           <li class="text-[20px] text-col1-800">
-            <RouterLink to="/Paper/">О нас</RouterLink>
+            <RouterLink :to="m_Base">О нас</RouterLink>
           </li>
           <li class="text-[20px] text-col1-800">
-            <RouterLink to="/Paper/">Контакты</RouterLink>
+            <RouterLink :to="m_Base">Контакты</RouterLink>
           </li>
           <li class="text-[20px] text-col1-800">
-            <RouterLink to="/Paper/seanses">Сеансы</RouterLink>
+            <RouterLink :to="m_Base + 'seanses'">Сеансы</RouterLink>
           </li>
         </ul>
       </nav>

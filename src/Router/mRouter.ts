@@ -1,12 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+const my_base = import.meta.env.BASE_URL;
+
 const appRoutes = [
   {
-    path: "/Paper/",
+    path: my_base,
     component: () => import("../components/Pages/MainPage.vue"),
   },
   {
-    path: "/Paper/seanses",
+    path: my_base + "seanses",
     component: () => import("../components/Pages/seansesPage.vue"),
   },
 ];
