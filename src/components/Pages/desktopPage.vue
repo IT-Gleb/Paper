@@ -58,7 +58,7 @@ const { KatalogBtn, upBtn, textBtn } = useNeededComponents();
             role="navigation"
           >
             <li class="text-[20px] text-col1-800">
-              <RouterLink to="/">Продукция</RouterLink>
+              <RouterLink to="/Paper">Продукция</RouterLink>
             </li>
             <li class="text-[20px] text-col1-800">
               <RouterLink to="/">Материалы</RouterLink>
