@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 const appRoutes = [
-  { path: "/", component: () => import("../components/Pages/MainPage.vue") },
+  {
+    path: "/PaperSite/",
+    component: () => import("../components/Pages/MainPage.vue"),
+  },
   {
     path: "/seanses",
     component: () => import("../components/Pages/seansesPage.vue"),
