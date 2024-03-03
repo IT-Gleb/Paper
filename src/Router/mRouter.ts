@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const appRoutes = [
   {
-    path: "/PaperSite/",
+    path: "/Paper/",
     component: () => import("../components/Pages/MainPage.vue"),
   },
   {
